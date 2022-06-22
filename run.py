@@ -7,17 +7,9 @@ def showCarModels():
     print(f'\nYou picked car model: {car_model}')       
     return car_model
 
-def showColorOptions():
-    print('Which color would you like? Choose between option 1-3. \n\n1. Pearl White\n2. Midnight Blue \n3. Black \n')
-    color = input('Enter your option here: ')
-    print(f'\nYou picked color: {color}')       
-    return color
-
 def main():
     print('Hello! Welcome to the Tesla Ordering app. \n\n')
 
     showCarModels()
-    showColorOptions()
-
 
 main()
