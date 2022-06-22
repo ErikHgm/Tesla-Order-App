@@ -1,3 +1,23 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+
+
+def showCarModels():
+
+    print('Which car model would you like to order? Choose between option 1-4. \n\n1. Model S \n2. Model X \n3. Model 3 \n4. Model Y \n')
+    car_model = input('Enter your option here: ')
+    print(f'\nYou picked car model: {car_model}')       
+    return car_model
+
+def showColorOptions():
+    print('Which color would you like? Choose between option 1-3. \n\n1. Pearl White\n2. Midnight Blue \n3. Black \n')
+    color = input('Enter your option here: ')
+    print(f'\nYou picked color: {color}')       
+    return color
+
+def main():
+    print('Hello! Welcome to the Tesla Ordering app. \n\n')
+
+    showCarModels()
+    showColorOptions()
+
+
+main()
