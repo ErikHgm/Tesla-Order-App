@@ -6,17 +6,17 @@ def show_car_models():
     Stores the option that the user chose.
     """
     print('Which car model would you like to order? Choose between option 1-4. \n\n1. Model S \n2. Model X \n3. Model 3 \n4. Model Y \n')
-    car_model = input('Enter your option here: ')
+    user_choice = input('Enter your option here: ')
     print(f'\nYou picked car model: {car_model}') 
     price = 0
     model = ''
-    if car_model == '1':
+    if user_choice == '1':
         price = 89000
         model = 'Model S' 
-    elif car_model == '2':
+    elif user_choice == '2':
         price = 95000
         model = 'Model X' 
-    elif car_model == '3':
+    elif user_choice == '3':
         price = 49000
         model = 'Model 3' 
     else:
