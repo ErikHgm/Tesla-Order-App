@@ -33,6 +33,16 @@ def show_drivetrain_options():
     print(f'\nYou picked drivetrain: {drivetrain}')       
     return drivetrain
 
+def show_interior_options():
+    """
+    Shows user the different interior options. 
+    Stores the answer that the user chose.
+    """
+    print()
+    print('Which interior color would you like? Choose between option 1-2. \n\n1. White \n2. Black \n')
+    interior = input('Enter your option here: ')
+    print(f'\nYou picked interior: {interior}')       
+    return interior
 
 def main():
     print('Hello! Welcome to the Tesla Ordering app. \n\n')
@@ -40,5 +50,6 @@ def main():
     show_car_models()
     show_color_options()
     show_drivetrain_options()
+    show_interior_options()
 
 main()
