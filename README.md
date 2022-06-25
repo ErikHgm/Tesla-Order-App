@@ -105,7 +105,7 @@ You will need to set your Environment Variables - this is a key step to ensuring
 2. Buildpacks are also required for proper deployment, simply click `Add buildpack` and search for the ones that you require.
     - For this project, I needed to add `Python` and `Node.js`, in this order.
 
-#### Heroku Deployment  
+####  Heroku Deployment  
 In the Deploy tab:
 1. Connect your Heroku account to your Github Repository following these steps:
     - Click on the `Deploy` tab and choose `Github-Connect to Github`.
