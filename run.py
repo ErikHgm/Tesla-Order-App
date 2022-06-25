@@ -3,7 +3,7 @@
 def show_car_models():
     """
     Shows user the different car models. 
-    Stores the option that the user chose.
+    Returns the price and model that the user chose.
     """
     print('Which car model would you like to order? Choose between option 1-4. \n\n1. Model S ($89000)\n2. Model X ($95000)\n3. Model 3 ($49000)\n4. Model Y ($55000)\n')
     user_choice = input('Enter your option here: ')
@@ -28,7 +28,7 @@ def show_car_models():
 def show_color_options():
     """
     Shows user the different options for colors. 
-    Stores the color that the user chose.
+    Returns the price and color that the user chose.    
     """
     print()
     print('Which color would you like? Choose between option 1-3. \n\n1. Black (standard)\n2. Titanium Grey (+ $500)\n3. Pearl White (+ $1000)\n')
@@ -51,7 +51,7 @@ def show_color_options():
 def show_drivetrain_options():
     """
     Shows user the different drivetrain options. 
-    Stores the answer that the user chose.
+    Returns the price and drivetrain that the user chose.    
     """
     print()
     print('Which drivetrain option would you like? Choose between option 1-2. \n\n1. 2WD (standard)\n2. 4WD (+ $2000)\n')
@@ -71,7 +71,7 @@ def show_drivetrain_options():
 def show_interior_options():
     """
     Shows user the different interior options. 
-    Stores the answer that the user chose.
+    Returns the price and interior that the user chose.
     """
     print()
     print('Which interior color would you like? Choose between option 1-2. \n\n1. Black (standard)\n2. White (+ $2000) \n')
@@ -88,6 +88,9 @@ def show_interior_options():
     return price, interior
 
 def main():
+    """
+    Main function that runs the program by calling the other functions in order. 
+    """
     print('Hello! Welcome to the Tesla Ordering app. \n\n')
 
     show_car_models()
