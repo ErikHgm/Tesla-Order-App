@@ -5,7 +5,7 @@ def show_car_models():
     Shows user the different car models. 
     Stores the option that the user chose.
     """
-    print('Which car model would you like to order? Choose between option 1-4. \n\n1. Model S \n2. Model X \n3. Model 3 \n4. Model Y \n')
+    print('Which car model would you like to order? Choose between option 1-4. \n\n1. Model S ($89000)\n2. Model X ($95000)\n3. Model 3 ($49000)\n4. Model Y ($55000)\n')
     user_choice = input('Enter your option here: ')
     print(f'\nYou picked car model: {user_choice}') 
     price = 0
@@ -31,20 +31,20 @@ def show_color_options():
     Stores the color that the user chose.
     """
     print()
-    print('Which color would you like? Choose between option 1-3. \n\n1. Pearl White \n2. Titanium Grey \n3. Black \n')
+    print('Which color would you like? Choose between option 1-3. \n\n1. Black (standard)\n2. Titanium Grey (+ $500)\n3. Pearl White (+ $1000)\n')
     user_choice = input('Enter your option here: ')
     print(f'\nYou picked color: {user_choice}')       
     price = 0
     color = ''
     if user_choice == '1':
-        price = 1000
-        color = 'Pearl White' 
+        price = 0
+        color = 'Black' 
     elif user_choice == '2':
         price = 500
         color = 'Titanium Grey' 
     else:
-        price = 0
-        color = 'Black'      
+        price = 1000
+        color = 'Pearl White'      
     return price, color
 
 
