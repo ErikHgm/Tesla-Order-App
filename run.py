@@ -54,10 +54,19 @@ def show_drivetrain_options():
     Stores the answer that the user chose.
     """
     print()
-    print('Which drivetrain option would you like? Choose between option 1-2. \n\n1. 2WD \n2. 4WD \n')
-    drivetrain = input('Enter your option here: ')
-    print(f'\nYou picked drivetrain: {drivetrain}')       
-    return drivetrain
+    print('Which drivetrain option would you like? Choose between option 1-2. \n\n1. 2WD (standard)\n2. 4WD (+ $2000)\n')
+    user_choice = input('Enter your option here: ')
+    print(f'\nYou picked drivetrain: {user_choice}')       
+    price = 0
+    drivetrain = ''
+    if user_choice == '1':
+        price = 0
+        drivetrain = '2WD' 
+    else:
+        price = 2000
+        drivetrain = '4WD'      
+    return price, drivetrain
+
 
 def show_interior_options():
     """
@@ -69,7 +78,6 @@ def show_interior_options():
     interior = input('Enter your option here: ')
     print(f'\nYou picked interior: {interior}')       
     return interior
-
 
 def main():
     print('Hello! Welcome to the Tesla Ordering app. \n\n')
