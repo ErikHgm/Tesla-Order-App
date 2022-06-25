@@ -74,10 +74,18 @@ def show_interior_options():
     Stores the answer that the user chose.
     """
     print()
-    print('Which interior color would you like? Choose between option 1-2. \n\n1. White \n2. Black \n')
-    interior = input('Enter your option here: ')
-    print(f'\nYou picked interior: {interior}')       
-    return interior
+    print('Which interior color would you like? Choose between option 1-2. \n\n1. Black (standard)\n2. White (+ $2000) \n')
+    user_choice = input('Enter your option here: ')
+    print(f'\nYou picked interior: {user_choice}')       
+    price = 0
+    interior = ''
+    if user_choice == '1':
+        price = 2000
+        interior = 'White' 
+    else:
+        price = 0
+        interior = 'Black'      
+    return price, interior
 
 def main():
     print('Hello! Welcome to the Tesla Ordering app. \n\n')
