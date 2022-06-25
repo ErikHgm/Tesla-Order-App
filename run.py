@@ -7,7 +7,7 @@ def show_car_models():
     """
     print('Which car model would you like to order? Choose between option 1-4. \n\n1. Model S \n2. Model X \n3. Model 3 \n4. Model Y \n')
     user_choice = input('Enter your option here: ')
-    print(f'\nYou picked car model: {car_model}') 
+    print(f'\nYou picked car model: {user_choice}') 
     price = 0
     model = ''
     if user_choice == '1':
@@ -32,10 +32,20 @@ def show_color_options():
     """
     print()
     print('Which color would you like? Choose between option 1-3. \n\n1. Pearl White \n2. Titanium Grey \n3. Black \n')
-    color = input('Enter your option here: ')
-    print(f'\nYou picked color: {color}')       
-          
-    return color
+    user_choice = input('Enter your option here: ')
+    print(f'\nYou picked color: {user_choice}')       
+    price = 0
+    color = ''
+    if user_choice == '1':
+        price = 1000
+        color = 'Pearl White' 
+    elif user_choice == '2':
+        price = 500
+        color = 'Titanium Grey' 
+    else:
+        price = 0
+        color = 'Black'      
+    return price, color
 
 
 def show_drivetrain_options():
