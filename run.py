@@ -16,10 +16,22 @@ def show_color_options():
     Stores the color that the user chose.
     """
     print()
-    print('Which color would you like? Choose between option 1-4. \n\n1. Pearl White \n2. Titanium Grey \n3. Black \n')
+    print('Which color would you like? Choose between option 1-3. \n\n1. Pearl White \n2. Titanium Grey \n3. Black \n')
     color = input('Enter your option here: ')
     print(f'\nYou picked color: {color}')       
     return color
+
+
+def show_drivetrain_options():
+    """
+    Shows user the different drivetrain options. 
+    Stores the answer that the user chose.
+    """
+    print()
+    print('Which drivetrain option would you like? Choose between option 1-2. \n\n1. 2WD \n2. 4WD \n')
+    drivetrain = input('Enter your option here: ')
+    print(f'\nYou picked drivetrain: {drivetrain}')       
+    return drivetrain
 
 
 def main():
@@ -27,5 +39,6 @@ def main():
 
     show_car_models()
     show_color_options()
+    show_drivetrain_options()
 
 main()
