@@ -1,3 +1,4 @@
+import time
 from pyfiglet import Figlet
 
 class CustomerOrder:
@@ -106,7 +107,7 @@ def validate_user_choice(choice, length):
     """ 
     if int(choice) > length or int(choice) < 1:
         print(f'Your answer should be a number between 1 and {length}, please try again!\n\n')
-     
+        time.sleep(2)
     else:
         return True
 
