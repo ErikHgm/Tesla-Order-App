@@ -1,15 +1,18 @@
 
-
 def show_car_models():
     """
     Shows user the different car models. 
     Returns the price and model that the user chose.
     """
-    print('Which car model would you like to order? Choose between option 1-4. \n\n1. Model S ($89000)\n2. Model X ($95000)\n3. Model 3 ($49000)\n4. Model Y ($55000)\n')
-    user_choice = input('Enter your option here: ')
-    model_options = ['Model S', 'Model X', 'Model 3', 'Model Y']
-    model = model_options[int(user_choice)-1]
-    print(f'\nYou have selected model: {model}\n')  
+    while True:
+        print('Which car model would you like to order? Choose between option 1-4. \n\n1. Model S ($89000)\n2. Model X ($95000)\n3. Model 3 ($49000)\n4. Model Y ($55000)\n')
+        user_choice = input('Enter your option here: ')
+        options = ['Model S', 'Model X', 'Model 3', 'Model Y']
+
+        if validate_user_choice(user_choice, len(options)):
+            model = options[int(user_choice)-1]
+            print(f'\nYou have selected model: {model}\n')
+            break
 
     return model
 
@@ -47,6 +50,7 @@ def show_interior_options():
     Shows user the different interior options. 
     Returns the price and interior that the user chose.
     """
+    
     print('Which interior color would you like? Choose between option 1-2. \n\n1. Black (standard)\n2. White (+ $2000) \n')
     user_choice = input('Enter your option here: ')
     interior_options = ['Black', 'White']
@@ -56,7 +60,23 @@ def show_interior_options():
     return interior
 
 
+def validate_user_choice(choice, length):
+    """
+    Checks and validates that the input user makes is correct.
+    If incorrect it asks the user to try again.
+    """ 
+    if int(choice) > length or int(choice) < 1:
+        print(f'Your answer should be a number between 1 and {length}, please try again!\n\n')
+     
+    else:
+        return True
+
+
 class CustomerOrder:
+    """
+    Class that creates the customer order summary that is used by 
+    the main function to display the order to the customer.
+    """
     
     def __init__(self, model, color, drivetrain, interior):
         self.model = model
@@ -66,8 +86,6 @@ class CustomerOrder:
 
     def order_summary(self):
         print(f'Thank you for you order!\nYour order details:\n{self.model}\n{self.color}\n{self.drivetrain}\n{self.interior}\n')
-
-    
 
 
 def main():
@@ -86,4 +104,7 @@ def main():
 
 
 main()
+
+
+
 
