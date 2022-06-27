@@ -1,3 +1,5 @@
+from pyfiglet import Figlet
+
 class CustomerOrder:
     """
     Class that creates the customer order summary that is used by 
@@ -94,7 +96,10 @@ def main():
     """
     Main function that runs the program by calling the other functions in order. 
     """
-    print('Hello! Welcome to the Tesla Ordering app. \n\n')
+    logo = Figlet(font="slant")
+    print(logo.renderText("TESLA"))
+    print('Welcome to the Tesla ordering app!\n')
+    
 
     model = show_car_models()
     color = show_color_options()
@@ -110,7 +115,7 @@ while True:
     if end_message.lower() == 'y':
         continue
     else:
-        print('\nHave a great day!')
+        print('\nThank you for your order.\nHave a great day!')
         break
 
 
