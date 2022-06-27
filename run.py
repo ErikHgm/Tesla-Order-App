@@ -1,4 +1,3 @@
-
 def show_car_models():
     """
     Shows user the different car models. 
@@ -16,49 +15,54 @@ def show_car_models():
 
     return model
 
-
 def show_color_options():
     """
     Shows user the different options for colors. 
     Returns the price and color that the user chose.    
     """
-    print('Which color would you like? Choose between option 1-3. \n\n1. Black (standard)\n2. Titanium Grey (+ $500)\n3. Pearl White (+ $1000)\n')
-    user_choice = input('Enter your option here: ')
-    color_options = ['Black', 'Titanium Grey', 'Pearl White']
-    color = color_options[int(user_choice)-1]
-    print(f'\nYou have selected color: {color}\n')  
-
+    while True:
+        print('Which color would you like? Choose between option 1-3. \n\n1. Black (standard)\n2. Titanium Grey (+ $500)\n3. Pearl White (+ $1000)\n')
+        user_choice = input('Enter your option here: ')
+        options = ['Black', 'Titanium Grey', 'Pearl White']
+        
+        if validate_user_choice(user_choice, len(options)):
+            color = options[int(user_choice)-1]
+            print(f'\nYou have selected color: {color}\n') 
+            break
+     
     return color
-
 
 def show_drivetrain_options():
     """
     Shows user the different drivetrain options. 
     Returns the price and drivetrain that the user chose.    
     """
-    print('Which drivetrain option would you like? Choose between option 1-2. \n\n1. 2WD (standard)\n2. 4WD (+ $2000)\n')
-    user_choice = input('Enter your option here: ')
-    drivetrain_options = ['2WD', '4WD']
-    drivetrain = drivetrain_options[int(user_choice)-1]
-    print(f'\nYou have selected drivetrain: {drivetrain}\n')  
+    while True:
+        print('Which drivetrain option would you like? Choose between option 1-2. \n\n1. 2WD (standard)\n2. 4WD (+ $2000)\n')
+        user_choice = input('Enter your option here: ')
+        options = ['2WD', '4WD']
+        if validate_user_choice(user_choice, len(options)):
+            drivetrain = options[int(user_choice)-1]
+            print(f'\nYou have selected drivetrain: {drivetrain}\n')  
+            break
 
     return drivetrain
-
 
 def show_interior_options():
     """
     Shows user the different interior options. 
     Returns the price and interior that the user chose.
     """
-    
-    print('Which interior color would you like? Choose between option 1-2. \n\n1. Black (standard)\n2. White (+ $2000) \n')
-    user_choice = input('Enter your option here: ')
-    interior_options = ['Black', 'White']
-    interior = interior_options[int(user_choice)-1]
-    print(f'\nYou have selected interior: {interior}\n')  
+    while True:
+        print('Which interior color would you like? Choose between option 1-2. \n\n1. Black (standard)\n2. White (+ $2000) \n')
+        user_choice = input('Enter your option here: ')
+        options = ['Black', 'White']
+        if validate_user_choice(user_choice, len(options)):
+            interior = options[int(user_choice)-1]
+            print(f'\nYou have selected interior: {interior}\n')  
+            break
 
     return interior
-
 
 def validate_user_choice(choice, length):
     """
@@ -70,7 +74,6 @@ def validate_user_choice(choice, length):
      
     else:
         return True
-
 
 class CustomerOrder:
     """
@@ -87,7 +90,6 @@ class CustomerOrder:
     def order_summary(self):
         print(f'Thank you for you order!\nYour order details:\n{self.model}\n{self.color}\n{self.drivetrain}\n{self.interior}\n')
 
-
 def main():
     """
     Main function that runs the program by calling the other functions in order. 
@@ -101,7 +103,6 @@ def main():
     order = CustomerOrder(model, color, drivetrain, interior)
 
     print(order.order_summary())
-
 
 main()
 
