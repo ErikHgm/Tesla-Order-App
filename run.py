@@ -1,3 +1,18 @@
+class CustomerOrder:
+    """
+    Class that creates the customer order summary that is used by 
+    the main function to display the order to the customer.
+    """
+    
+    def __init__(self, model, color, drivetrain, interior):
+        self.model = model
+        self.color = color
+        self.drivetrain = drivetrain
+        self.interior = interior
+
+    def order_summary(self):
+        print(f'Thank you for you order!\nYour order details:\n{self.model}\n{self.color}\n{self.drivetrain}\n{self.interior}\n')
+
 def show_car_models():
     """
     Shows user the different car models. 
@@ -74,21 +89,6 @@ def validate_user_choice(choice, length):
      
     else:
         return True
-
-class CustomerOrder:
-    """
-    Class that creates the customer order summary that is used by 
-    the main function to display the order to the customer.
-    """
-    
-    def __init__(self, model, color, drivetrain, interior):
-        self.model = model
-        self.color = color
-        self.drivetrain = drivetrain
-        self.interior = interior
-
-    def order_summary(self):
-        print(f'Thank you for you order!\nYour order details:\n{self.model}\n{self.color}\n{self.drivetrain}\n{self.interior}\n')
 
 def main():
     """
