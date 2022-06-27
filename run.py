@@ -13,7 +13,25 @@ class CustomerOrder:
         self.interior = interior
 
     def order_summary(self):
-        print(f'Thank you for you order!\nYour order details:\n{self.model}\n{self.color}\n{self.drivetrain}\n{self.interior}\n')
+
+        pricing = {
+           'Model S': '89000',
+           'Model X': '95000',  
+           'Model 3': '49000',  
+           'Model Y': '55000',    
+           'Blue': '0',
+           'Titanium Grey': '500',  
+           'Pearl White': '1000', 
+           '2WD': '0',  
+           '4WD': '2000',    
+           'Black': '0',  
+           'White': '2000'    
+        }
+
+        print('------------------------------------------')
+        print(f'Thank you for you order!')
+        print('------------------------------------------')
+        print(f'See your order details below:\n\nModel: {self.model} Price: ${pricing[self.model]}\nColor: {self.color} Price: ${pricing[self.color]}\nDrivetrain: {self.drivetrain} Price: ${pricing[self.drivetrain]}\nInterior: {self.interior} Price: ${pricing[self.interior]}\n')
 
 def show_car_models():
     """
@@ -38,9 +56,9 @@ def show_color_options():
     Returns the price and color that the user chose.    
     """
     while True:
-        print('Which color would you like? Choose between option 1-3. \n\n1. Black (standard)\n2. Titanium Grey (+ $500)\n3. Pearl White (+ $1000)\n')
+        print('Which color would you like? Choose between option 1-3. \n\n1. Blue (standard)\n2. Titanium Grey (+ $500)\n3. Pearl White (+ $1000)\n')
         user_choice = input('Enter your option here: ')
-        options = ['Black', 'Titanium Grey', 'Pearl White']
+        options = ['Blue', 'Titanium Grey', 'Pearl White']
         
         if validate_user_choice(user_choice, len(options)):
             color = options[int(user_choice)-1]
@@ -99,7 +117,6 @@ def main():
     logo = Figlet(font="slant")
     print(logo.renderText("TESLA"))
     print('Welcome to the Tesla ordering app!\n')
-    
 
     model = show_car_models()
     color = show_color_options()
@@ -117,7 +134,3 @@ while True:
     else:
         print('\nThank you for your order.\nHave a great day!')
         break
-
-
-
-
