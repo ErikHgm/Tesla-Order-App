@@ -104,7 +104,14 @@ def main():
 
     print(order.order_summary())
 
-main()
+while True:
+    main()
+    end_message = input('\nWould you like to place another order? Please enter (Y/N): ')
+    if end_message.lower() == 'y':
+        continue
+    else:
+        print('\nHave a great day!')
+        break
 
 
 
