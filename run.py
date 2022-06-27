@@ -56,21 +56,18 @@ def show_interior_options():
     return interior
 
 
-def print_receipt(car, color, drivetrain, interior):
-    """
-    Prints the costs and option selected by the user for each item.
-    Calculate and prints total cost for the order.
-    """
-    print('Your order summary:')
-    print(car)
-    print(color)
-    print(drivetrain)
-    print(interior)
+class CustomerOrder:
+    
+    def __init__(self, model, color, drivetrain, interior):
+        self.model = model
+        self.color = color
+        self.drivetrain = drivetrain
+        self.interior = interior
 
-    total_price = car[0]+color[0]+drivetrain[0]+interior[0]
-    print(total_price)
+    def order_summary(self):
+        print(f'Thank you for you order!\nYour order details:\n{self.model}\n{self.color}\n{self.drivetrain}\n{self.interior}\n')
 
-
+    
 
 
 def main():
@@ -79,10 +76,13 @@ def main():
     """
     print('Hello! Welcome to the Tesla Ordering app. \n\n')
 
-    car_option = show_car_models()
-    color_option = show_color_options()
-    drivetrain_option = show_drivetrain_options()
-    interior_option = show_interior_options()
+    model = show_car_models()
+    color = show_color_options()
+    drivetrain = show_drivetrain_options()
+    interior = show_interior_options()
+    order = CustomerOrder(model, color, drivetrain, interior)
+
+    print(order.order_summary())
 
 
 main()
