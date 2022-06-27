@@ -33,7 +33,6 @@ def show_color_options():
     print()
     print('Which color would you like? Choose between option 1-3. \n\n1. Black (standard)\n2. Titanium Grey (+ $500)\n3. Pearl White (+ $1000)\n')
     user_choice = input('Enter your option here: ')
-    print(f'\nYou picked color: {user_choice}')       
     price = 0
     color = ''
     if user_choice == '1':
@@ -44,7 +43,10 @@ def show_color_options():
         color = 'Titanium Grey' 
     else:
         price = 1000
-        color = 'Pearl White'      
+        color = 'Pearl White'   
+    
+    print(f'\nYou picked: {color}')       
+   
     return price, color
 
 
@@ -80,12 +82,31 @@ def show_interior_options():
     price = 0
     interior = ''
     if user_choice == '1':
-        price = 2000
-        interior = 'White' 
+        #price = 0
+        interior = 'Black' 
+        return interior
     else:
-        price = 0
-        interior = 'Black'      
-    return price, interior
+        price = 2000
+        interior = 'White'      
+        return price, interior
+
+
+def print_receipt(car, color, drivetrain, interior):
+    """
+    Prints the costs and option selected by the user for each item.
+    Calculate and prints total cost for the order.
+    """
+    print('Your order summary:')
+    print(car)
+    print(color)
+    print(drivetrain)
+    print(interior)
+
+    total_price = car[0]+color[0]+drivetrain[0]+interior[0]
+    print(total_price)
+
+
+
 
 def main():
     """
@@ -93,9 +114,13 @@ def main():
     """
     print('Hello! Welcome to the Tesla Ordering app. \n\n')
 
-    show_car_models()
-    show_color_options()
-    show_drivetrain_options()
-    show_interior_options()
+    car_option = show_car_models()
+    color_option = show_color_options()
+    drivetrain_option = show_drivetrain_options()
+    interior_option = show_interior_options()
+
+    print_receipt(car_option, color_option, drivetrain_option, interior_option)
+ 
 
 main()
+
