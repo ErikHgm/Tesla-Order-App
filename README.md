@@ -1,5 +1,5 @@
 <h1 align="center">Tesla Order App</h1>
-<h2 align="center"><img src=""></h2>
+<h2 align="center"><img src="assets/images/main.png"></h2>
 This web app is for users who are interested in buying a car and are specifically looking to buy a Tesla. The app provides options for the user to choose from all the different models of the Tesla brand and further provides additional options such as color, engine choice, interior options and then displaying the total cost for the user depending on their preferences.           
 
 
