@@ -27,6 +27,7 @@ This web app is for users who are interested in buying a car and are specificall
 
 
 -   ### Flowchart
+    -Overview of the design flow process that describes each step in the process that the application executes.
 
 ![Flowchart](assets/images/flowchart.png)
 
@@ -63,18 +64,28 @@ This web app is for users who are interested in buying a car and are specificall
 - ### The endmessage screen  
     -   At the end of the ordering process, the user can decide whether to continue with another  
     order or quit the app, in which case the system greets the customer good bye.
-    
+
 ![Endmessage](assets/images/endmessage.png)
 
 ## Technologies Used
 
 ### Languages Used
-
+ - [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) 
+    - The main language used  
+  
 
 
 ### Frameworks, Libraries & Programs Used
-
-
+  - [Git](https://git-scm.com/)
+    - Git was used for version control through the Gitpod terminal to commit and push to GitHub
+ - [GitHub:](https://github.com/)
+     - Was used for all storing and backup of the code pertaining to the project. 
+ - [Heroku:](https://heroku.com/)
+     - Was used to deploy the project. 
+ - [Time:](https://docs.python.org/3/library/time.html)   
+    - Module in Python integrated in the application.
+ - [Pyfiglet:](https://pypi.org/project/pyfiglet/0.7/) 
+    - Module used in the application to create the logo effect.
 ## Testing
 
 
