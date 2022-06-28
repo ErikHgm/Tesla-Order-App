@@ -136,15 +136,10 @@ In the Deploy tab:
     
 
 ### Code
-
-
-
-### Content
-
-
-
-### Media
-
-
+- The inspiration on how to use the while loop when validating user input data comes from the Code Institutes Love Sandwich project.
 
 ### Acknowledgements
+I would like to thank:
+
+- The tutor support team att Code Institute for their support.
+- My Code Institute Mentor for feedback and suggestions.
