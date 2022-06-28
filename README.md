@@ -11,17 +11,19 @@ This web app is for users who are interested in buying a car and are specificall
 -   ### User stories
 
     -   #### First Time Visitor Goals
-
-
+        As a first time visitor I expect to easily be able to make my selections depending on the options I am shown.  
+        As a first time visitor I want to be able to see the neccesary information to be able to make a descicion. 
+        As a first time visitor I expect information about pricing, packages, model features etc.
 
     -   #### Returning Visitor Goals
-
-
+        As a returning user I want to be able to navigate through the different options available and make another order.
 
     -   #### Frequent User Goals
+        It is unlikely users will become frequent buyers for an expensive product that very few can afford to buy.
 
 
 -   ### Design
+    The structure and design of the system is developed with ease of use in mind. To create user value, only the information necessary at a particular moment is shown to the user at the right time. Each step in the ordering process is carefully thought out with improved user experience in mind.
 
 
 -   ### Flowchart
