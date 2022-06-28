@@ -8,15 +8,15 @@ class CustomerOrder:
     the main function to display the order to the customer.
     """
 
-    def __init__(self, model, color, drivetrain, interior):
+    def __init__(self, model, color, drive, interior):
         self.model = model
         self.color = color
-        self.drivetrain = drivetrain
+        self.drive = drive
         self.interior = interior
 
     def order_summary(self):
 
-        pricing = {
+        price = {
            'Model S': '89000',
            'Model X': '95000',
            'Model 3': '49000',
@@ -32,18 +32,20 @@ class CustomerOrder:
         print("\nCreating your order...\n")
         time.sleep(2)
         print('------------------------------------------')
-        print(f'Thank you for your order!')
+        print('Thank you for your order!')
         print('------------------------------------------')
         print('See your order details below:\n')
-        print(f'Model: {self.model:>15} Price: ${pricing[self.model]:>5}')
-        print(f'Color: {self.color:>15} Price: ${pricing[self.color]:>5}')
-        print(f'Drivetrain: {self.drivetrain:>10} Price: ${pricing[self.drivetrain]:>5}')
-        print(f'Interior: {self.interior:>12} Price: ${pricing[self.interior]:>5}')
+        print(f'Model: {self.model:>15} Price: ${price[self.model]}')
+        print(f'Color: {self.color:>15} Price: ${price[self.color]}')
+        print(f'Drivetrain: {self.drive:>10} Price: ${price[self.drive]}')
+        print(f'Interior: {self.interior:>12} Price: ${price[self.interior]}')
 
-        order_total = int(pricing[self.model])+int(pricing[self.color])+int(pricing[self.drivetrain])+int(pricing[self.interior])
-        print(f'\nOrder Total: ${order_total}')
-        print(f'Tax rebates: $5000')
-        print(f'Your Totals: ${order_total-5000}\n')
+        order_total_first = int(price[self.model])+int(price[self.color])
+        order_total_sec = int(price[self.drive])+int(price[self.interior])
+        
+        print(f'\nOrder Total: ${order_total_first+order_total_sec}')
+        print('Tax rebates: $5000')
+        print(f'Your Totals: ${order_total_first+order_total_sec-5000}\n')
 
 
 def show_car_models():
@@ -52,7 +54,10 @@ def show_car_models():
     Returns the price and model that the user chose.
     """
     while True:
-        print('Which car model would you like to order? Choose between option 1-4. \n\n1. Model S ($89000)\n2. Model X ($95000)\n3. Model 3 ($49000)\n4. Model Y ($55000)\n')
+        print('Which car model would you like to order?')
+        print('Choose between option 1-4. \n\n(1) Model S ($89000)')
+        print('(2) Model X ($95000)\n(3) Model 3 ($49000)')
+        print('(4) Model Y ($55000)\n')
         user_choice = input('Enter your option here: ')
         options = ['Model S', 'Model X', 'Model 3', 'Model Y']
 
@@ -70,8 +75,9 @@ def show_color_options():
     Returns the price and color that the user chose.
     """
     while True:
-        print('Which color would you like? Choose between option 1-3. \n\n1. Blue (standard)\n2. Titanium Grey (+ $500)\n3. Pearl White (+ $1000)\n')
-        user_choice = input('Enter your option here: ')
+        print('Which color would you like? Choose between option 1-3.\n')
+        print('(1) Blue\n(2) Titanium Grey (+$500)\n(3) Pearl White (+$1000)')
+        user_choice = input('\nEnter your option here: ')
         options = ['Blue', 'Titanium Grey', 'Pearl White']
 
         if validate_user_choice(user_choice, len(options)):
@@ -88,15 +94,16 @@ def show_drivetrain_options():
     Returns the price and drivetrain that the user chose.
     """
     while True:
-        print('Which drivetrain option would you like? Choose between option 1-2. \n\n1. 2WD (standard)\n2. 4WD (+ $2000)\n')
+        print('Which drivetrain option would you like?')
+        print('Choose between option 1-2. \n\n(1) 2WD\n(2) 4WD (+$2000)\n')
         user_choice = input('Enter your option here: ')
         options = ['2WD', '4WD']
         if validate_user_choice(user_choice, len(options)):
-            drivetrain = options[int(user_choice)-1]
-            print(f'\nYou have selected drivetrain: {drivetrain}\n')
+            drive = options[int(user_choice)-1]
+            print(f'\nYou have selected drivetrain: {drive}\n')
             break
 
-    return drivetrain
+    return drive
 
 
 def show_interior_options():
@@ -105,7 +112,8 @@ def show_interior_options():
     Returns the price and interior that the user chose.
     """
     while True:
-        print('Which interior color would you like? Choose between option 1-2. \n\n1. Black (standard)\n2. White (+ $2000) \n')
+        print('Which interior color would you like?')
+        print('Choose between option 1-2.\n\n(1) Black\n(2) White (+$2000)\n')
         user_choice = input('Enter your option here: ')
         options = ['Black', 'White']
         if validate_user_choice(user_choice, len(options)):
@@ -122,7 +130,8 @@ def validate_user_choice(choice, length):
     If incorrect it asks the user to try again.
     """
     if int(choice) > length or int(choice) < 1:
-        print(f'Your answer should be a number between 1 and {length}, please try again!\n\n')
+        print(f'\nYour answer should be a number between 1 and {length}.')
+        print('Please try again!\n\n')
         time.sleep(2)
     else:
         return True
@@ -130,7 +139,8 @@ def validate_user_choice(choice, length):
 
 def main():
     """
-    Main function that runs the program by calling the other functions in order.
+    Main function that runs the program by calling
+    the other functions in order.
     """
     logo = Figlet(font="slant")
     print(logo.renderText("TESLA"))
@@ -138,16 +148,15 @@ def main():
 
     model = show_car_models()
     color = show_color_options()
-    drivetrain = show_drivetrain_options()
+    drive = show_drivetrain_options()
     interior = show_interior_options()
-    order = CustomerOrder(model, color, drivetrain, interior)
-
-    print(order.order_summary())
+    order = CustomerOrder(model, color, drive, interior)
+    order.order_summary()
 
 
 while True:
     main()
-    end_message = input('\nWould you like to place another order? Please enter (y): ')
+    end_message = input('\nDo you want to place another order? Enter (y/n): ')
     if end_message.lower() == 'y':
         continue
     else:
