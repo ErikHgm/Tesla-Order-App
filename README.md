@@ -12,7 +12,7 @@ This web app is for users who are interested in buying a car and are specificall
 
     -   #### First Time Visitor Goals
         As a first time visitor I expect to easily be able to make my selections depending on the options I am shown.  
-        As a first time visitor I want to be able to see the neccesary information to be able to make a descicion. 
+        As a first time visitor I want to be able to see the neccesary information to be able to make a descicion.  
         As a first time visitor I expect information about pricing, packages, model features etc.
 
     -   #### Returning Visitor Goals
@@ -93,19 +93,30 @@ This web app is for users who are interested in buying a car and are specificall
 ### Testing User Stories from User Experience (UX) Section
 
 -   #### First Time Visitor Goals
+    - As a first time visitor I expect to easily be able to make my selections depending on the options I am shown.  
+        - The different options is design to be easy to navigate and to quickly understand what is expected by the user from the application.  
 
+    - As a first time visitor I want to be able to see the neccesary information to be able to make a descicion.
+        - Information is provided as needed, such as no unnecessary information is provided n order ease the decision making process for the user.  
 
+    - As a first time visitor I expect information about pricing, packages, model features etc.  
+        - During the steps that the user proceeds through in the ordering process, all the necessary information is provided where the user makes their choices. 
 
 -   #### Returning Visitor Goals
+    - As a returning user I want to be able to navigate through the different options available and make another order.  
+        - The application is planned so that users easily learn the process and can make a second order quickly at a low learning curve.
+
+-   #### Frequent User Goals  
+    - It is unlikely users will become frequent buyers for an expensive product that very few can afford to buy.
 
 
+### Further Testing  
+- I have tested the application thoroughly in order to find any discrepancies and to confirm that everything is working as it intended to do. Extensive testing was performed in order to make sure the validation function works correctly and the order summary calculates the pricing correctly. 
+- [PEP8](http://pep8online.com/)
+    - Code validation was confirmed by using the PEP8 website.
 
--   #### Frequent User Goals
 
-
-### Further Testing
-
-
+![PEP8](assets/images/pep.png)
 
 ### Known Bugs
 |Bug | Solution | Status |
@@ -168,6 +179,7 @@ In the Deploy tab:
 
 ### Code
 - The inspiration on how to use the while loop when validating user input data comes from the Code Institutes Love Sandwich project.
+- [W3Scools](https://www.w3schools.com/) for ideas and inspiration.
 
 ### Acknowledgements
 I would like to thank:
