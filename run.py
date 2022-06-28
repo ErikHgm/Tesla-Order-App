@@ -28,11 +28,22 @@ class CustomerOrder:
            'Black': '0',  
            'White': '2000'    
         }
-
+        print("\nCreating your order...\n")
+        time.sleep(2)
         print('------------------------------------------')
         print(f'Thank you for you order!')
         print('------------------------------------------')
-        print(f'See your order details below:\n\nModel: {self.model} Price: ${pricing[self.model]}\nColor: {self.color} Price: ${pricing[self.color]}\nDrivetrain: {self.drivetrain} Price: ${pricing[self.drivetrain]}\nInterior: {self.interior} Price: ${pricing[self.interior]}\n')
+        print('See your order details below:\n')
+        print(f'Model: {self.model:>15} Price: ${pricing[self.model]:>5}')
+        print(f'Color: {self.color:>15} Price: ${pricing[self.color]:>5}')
+        print(f'Drivetrain: {self.drivetrain:>10} Price: ${pricing[self.drivetrain]:>5}')
+        print(f'Interior: {self.interior:>12} Price: ${pricing[self.interior]:>5}')
+        
+        order_total = int(pricing[self.model])+int(pricing[self.color])+int(pricing[self.drivetrain])+int(pricing[self.interior])
+        print(f'\nOrder Total: ${order_total}') 
+        print(f'Tax rebates: $5000')
+        print(f'Your Totals: ${order_total-5000}\n') 
+
 
 def show_car_models():
     """
@@ -129,7 +140,7 @@ def main():
 
 while True:
     main()
-    end_message = input('\nWould you like to place another order? Please enter (Y/N): ')
+    end_message = input('\nWould you like to place another order? Please enter (y): ')
     if end_message.lower() == 'y':
         continue
     else:
