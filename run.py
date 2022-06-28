@@ -42,7 +42,7 @@ class CustomerOrder:
 
         order_total_first = int(price[self.model])+int(price[self.color])
         order_total_sec = int(price[self.drive])+int(price[self.interior])
-        
+
         print(f'\nOrder Total: ${order_total_first+order_total_sec}')
         print('Tax rebates: $5000')
         print(f'Your Totals: ${order_total_first+order_total_sec-5000}\n')
@@ -129,12 +129,18 @@ def validate_user_choice(choice, length):
     Checks and validates that the input user makes is correct.
     If incorrect it asks the user to try again.
     """
-    if int(choice) > length or int(choice) < 1:
-        print(f'\nYour answer should be a number between 1 and {length}.')
-        print('Please try again!\n\n')
-        time.sleep(2)
-    else:
-        return True
+
+    try:
+        if int(choice) > length or int(choice) < 1:
+            raise ValueError
+
+    except ValueError:
+        print(f'Invalid data: Your choice should be a number 1-{length}')
+        print('Please try again!\n')
+
+        return False
+
+    return True
 
 
 def main():
