@@ -31,7 +31,7 @@ class CustomerOrder:
         print("\nCreating your order...\n")
         time.sleep(2)
         print('------------------------------------------')
-        print(f'Thank you for you order!')
+        print(f'Thank you for your order!')
         print('------------------------------------------')
         print('See your order details below:\n')
         print(f'Model: {self.model:>15} Price: ${pricing[self.model]:>5}')

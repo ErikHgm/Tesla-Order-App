@@ -3,7 +3,7 @@
 This web app is for users who are interested in buying a car and are specifically looking to buy a Tesla. The app provides options for the user to choose from all the different models of the Tesla brand and further provides additional options such as color, engine choice, interior options and then displaying the total cost for the user depending on their preferences.           
 
 
-[View the live project here.]()
+[View the live project here.](https://teslaorderapp.herokuapp.com/)
 
 
 ## User Experience (UX)
@@ -24,13 +24,30 @@ This web app is for users who are interested in buying a car and are specificall
 -   ### Design
 
 
-*   ### Wireframes
+-   ### Flowchart
 
-
+![Flowchart](assets/images/flowchart.png)
 
 ## Features
 
+- ### The welcome screen features 
 
+![Welcome](assets/images/welcome.png)
+
+- ### The color screen  
+![Color](assets/images/color.png)
+
+- ### The drivetrain screen  
+![Drivetrain](assets/images/drivetrain.png)
+
+- ### The interior screen  
+![Interior](assets/images/interior.png)
+
+- ### The summary screen  
+![Summary](assets/images/summary.png)
+
+- ### The endmessage screen  
+![Endmessage](assets/images/endmessage.png)
 
 ## Technologies Used
 
