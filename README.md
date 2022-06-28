@@ -32,23 +32,38 @@ This web app is for users who are interested in buying a car and are specificall
 
 ## Features
 
-- ### The welcome screen features 
+- ### The welcome screen
+    -   Welcomes the customer to the ordering system and displays the options available for different models.
 
 ![Welcome](assets/images/welcome.png)
 
 - ### The color screen  
+    -   In the color screen, the user is able to choose between the different options that is  
+    available for that particular model.
+
 ![Color](assets/images/color.png)
 
 - ### The drivetrain screen  
+    -   The drivetrain screen displays the options for either 2WD or 4WD to the user.
+
 ![Drivetrain](assets/images/drivetrain.png)
 
 - ### The interior screen  
+    -   In the interior page once can choose to upgrade your car from standard black to white interior.
+
 ![Interior](assets/images/interior.png)
 
 - ### The summary screen  
+    -   In the summary screen, an overview of all the choices the customer has made, the price  
+    for each item is display and the total price with deducted tax rebates are calculated  
+    and shown to the user.
+    
 ![Summary](assets/images/summary.png)
 
 - ### The endmessage screen  
+    -   At the end of the ordering process, the user can decide whether to continue with another  
+    order or quit the app, in which case the system greets the customer good bye.
+    
 ![Endmessage](assets/images/endmessage.png)
 
 ## Technologies Used
