@@ -116,7 +116,11 @@ This web app is for users who are interested in buying a car and are specificall
     - Code validation was confirmed by using the PEP8 website.
 
 
-![PEP8](assets/images/pep.png)
+![PEP8](assets/images/pep.png)  
+
+### Further Development  
+- As further development of the application, I plan to create an API connection to the application and upload the customer order in a Google Sheet.  
+
 
 ### Known Bugs
 |Bug | Solution | Status |
