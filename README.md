@@ -108,6 +108,9 @@ This web app is for users who are interested in buying a car and are specificall
 
 
 ### Known Bugs
+|Bug | Solution | Status |
+|----|:---------|:-------|
+|Validation of the user input did not work properly | Implement a try/except statement | Fixed |
 
 
 
